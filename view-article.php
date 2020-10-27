@@ -1,4 +1,4 @@
-<a href="home-page.php">Go to Home Page</a>
+<a href="home-page.php">Go to Back Home Page</a>
 
 <?php
 
@@ -17,24 +17,26 @@ $stmt = $pdo->prepare("SELECT * FROM `article`
 $stmt->execute();
 
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
 echo("<h1>");
 echo($row["title"]);
 echo("</h1>");
 
 
 echo("<h3>");
-echo("<label>Written By: </label>".$row["author"]);
+echo("<label>By: </label>".$row["author"]);
 echo("</h3>");
 
 echo("<h4>");
-echo($row["date"]);
+echo("<label>Published: </label>".$row["date"]);
 echo("</h4>");
 
+?><!DOCTYPE html>
+<img src="<?php echo($row['image']);?>" width="450"/><?php
 echo("<p>");
 	echo($row["content"]);
 echo("</p>");
 
 ?>
 
-<!DOCTYPE html>
 <a href="<?php echo($row['articleLink']);?>">Article Link</a><br>

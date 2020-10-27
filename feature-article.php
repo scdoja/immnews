@@ -3,11 +3,7 @@
 $articleId = $_GET["articleId"];
 
 //get person record form the database table
-$dsn = "mysql:host=localhost;dbname=immnew;charset=utf8mb4";
-
-$dbusername = "root";
-$dbpassword = "";
-$pdo = new PDO($dsn, $dbusername, $dbpassword);
+include('includes/db-config.php');
 
 $stmt = $pdo->prepare("SELECT * FROM `article`
 	WHERE `article`.`articleId` = $articleId;");

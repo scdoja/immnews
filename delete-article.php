@@ -5,11 +5,7 @@
 $articleId = $_GET["articleId"];
 
 //get person record form the database table
-$dsn = "mysql:host=localhost;dbname=immnew;charset=utf8mb4";
-
-$dbusername = "root";
-$dbpassword = "";
-$pdo = new PDO($dsn, $dbusername, $dbpassword);
+include('includes/db-config.php');
 
 $stmt = $pdo->prepare("SELECT * FROM `article`
 	WHERE `articleId` = $articleId");
@@ -18,9 +14,11 @@ $stmt->execute();
 
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 ?><h1>Are you sure you want to delete the following record?</h1><?php
-echo("<label>Article Title:</label>" .$row["title"]."<p>"."<br>");
-echo("<label>Article Content:</label>" .$row["content"]."<p>"."<br>");
-echo("<label>Article Date:</label>" .$row["date"]."<br>");
+echo("<label>Article Category: </label>" .$row["category"]."<p>"."<br>");
+echo("<label>Article Title: </label>" .$row["title"]."<p>"."<br>");
+echo("<label>Author: </label>" .$row["author"]."<p>"."<br>");
+echo("<label>Article Content: </label>" .$row["content"]."<p>"."<br>");
+echo("<label>Article Date: </label>" .$row["date"]."<br>");
 
 
 //show a form with prefilled info that we can change

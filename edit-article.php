@@ -5,11 +5,7 @@
 $articleId = $_GET["articleId"];
 
 //get person record form the database table
-$dsn = "mysql:host=localhost;dbname=immnew;charset=utf8mb4";
-
-$dbusername = "root";
-$dbpassword = "";
-$pdo = new PDO($dsn, $dbusername, $dbpassword);
+include('includes/db-config.php');
 
 $stmt = $pdo->prepare("SELECT * FROM `article`
 	WHERE `articleId` = $articleId;");
@@ -20,7 +16,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 //show a form with prefilled info that we can change
 ?>
-<form action="process-edit-page.php" method="POST">
+<form action="process-edit-article.php" method="POST">
 
     category: <label for="category">Select Article Category:</label>
 		<select name="category" id="category">
@@ -33,7 +29,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
     title: <input type="text" name="title" value="<?php echo($row["title"]);?>"/>
 
-	content: <input type="text" name="content" value="<?php echo($row["content"]);?>"/>
+	content: <input type="textarea" name="content" value="<?php echo($row["content"]);?>"/>
 
 	date: <input type="text" name="date" value="<?php echo($row["date"]);?>"/>
 

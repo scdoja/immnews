@@ -20,11 +20,7 @@
 </html>
 </body>
 <?php
-	$dsn = "mysql:host=localhost;dbname=immnew;charset=utf8mb4";
-
-	$dbusername = "root";
-	$dbpassword = "";
-	$pdo = new PDO($dsn, $dbusername, $dbpassword);
+    include('includes/db-config.php');
 
     $stmt = $pdo->prepare("SELECT * FROM `article`
     	WHERE `article`.`feature` = 1");
@@ -33,13 +29,34 @@
 	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 		//print_r($row);
         echo("<h3>Featured Article</h3>");
-		echo("<label>Article Title:</label>".$row["title"]."<br><label>Article Preview:</label>".$row["preview"]."<br><label>Article Date:</label> ".$row["date"]);
+        ?><!DOCTYPE html>
+        <img src="<?php echo($row['image']);?>" width="350"/><br><?php
+        echo("<p>");
+		echo("<label>Article Category:</label>".$row["category"]."<br><label>Article Title:</label>".$row["title"]."<br><label>Article Preview:</label>".$row["preview"]."<br><label>Article Date:</label> ".$row["date"]);
 		?>
 		<br><a href="view-article.php?articleId=<?php echo($row["articleId"]); ?>">View Full Article</a>
 		<?php
 	}
     ?>
 <p>
+<tabel>
+    <tr>
+        <th>Monthly Visitors -</th>
+        <th>April:</th>
+        <td>27 -</td>
+        <th>May:</th>
+        <td>35 -</td>
+        <th>June:</th>
+        <td>50 -</td>
+        <th>July:</th>
+        <td>60 -</td>
+        <th>August:</th>
+        <td>25 -</td>
+        <th>September:</th>
+        <td>15</td>
+    </tr>
+</table>
+
 <footer>
       IMM News Network Uses Cookies, click here -
       <a href="cookies-page.php">Accept Cookies</a>
