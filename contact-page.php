@@ -1,3 +1,14 @@
+<header>
+<nav>
+<img src="./images/logos/immlogo.png" width="120"/>
+<a href="home-page.php">Home Page</a>   |
+<a href="about-page.php">About Page</a> |
+<a href="contact-page.php">Contact Page</a>
+</nav>
+</header>
+
+<h2>Contact Page</h2>
+
 <!DOCTYPE html>
 </html>
 <html>
@@ -38,3 +49,9 @@
         </form>
         </body>
     	</html>
+<p>
+<footer>
+IMM News Network Uses Cookies, click here -
+<a href="cookies-page.php">Accept Cookies</a>
+</footer>
+</p>

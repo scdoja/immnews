@@ -20,4 +20,4 @@ $stmt->execute();
 
 ?>
 
-<p>Edit Successful!</p><a href="admin-articles.php">Back to Admin Dashboard</a>
+<p>Edit Successful!</p><a href="admin-dashboard.php">Back to Admin Dashboard</a>

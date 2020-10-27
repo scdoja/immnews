@@ -18,4 +18,4 @@ $stmt->execute();
 
 
 ?>
-DELETE sucessful. Back to records: <a href="select-articles.php">Back to Article Dashboard</a>
+DELETE sucessful. Back to records: <a href="admin-dashboard.php">Back to Admin Dashboard</a>

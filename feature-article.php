@@ -1,5 +1,3 @@
-<a href="home-page.php">Go to Home Page</a>
-
 <?php
 
 $articleId = $_GET["articleId"];
@@ -17,24 +15,20 @@ $stmt = $pdo->prepare("SELECT * FROM `article`
 $stmt->execute();
 
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
-echo("<h1>");
-echo($row["title"]);
-echo("</h1>");
-
-
-echo("<h3>");
-echo("<label>Written By: </label>".$row["author"]);
-echo("</h3>");
-
-echo("<h4>");
-echo($row["date"]);
-echo("</h4>");
-
-echo("<p>");
-	echo($row["content"]);
-echo("</p>");
 
 ?>
+<form action="process-feature-page.php" method="POST">
 
-<!DOCTYPE html>
-<a href="<?php echo($row['articleLink']);?>">Article Link</a><br>
+    <label for="feature">Feature Article:</label>
+    <select name="feature" id="feature">
+
+        <option value="0">Not Featured</option>
+
+        <option value="1">Featured</option>
+
+        <input type="hidden" name="articleId" value="<?php echo($row["articleId"]);?>">
+
+        <input type="submit" />
+
+</form>
+</select>

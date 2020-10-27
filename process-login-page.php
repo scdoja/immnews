@@ -21,7 +21,7 @@ if($row["userType"] == 'admin') {
 	//successful username/password combination
 	$_SESSION["personId"] = $row["personId"];
 	?><p>Welcome Admin!</p>
-	<a href="admin-articles.php">Go to Admin Article Dashboard</a><?php
+	<a href="admin-dashboard.php">Go to Admin Article Dashboard</a><?php
 }else{
 	$_SESSION["personId"] = $row["personId"];
 	?><p>Welcome User/Public to IMM News Network!</p>
