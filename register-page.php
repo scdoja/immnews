@@ -43,3 +43,7 @@
     </form>
 	</body>
 	</html>
+	<footer>
+	  IMM News Network Uses Cookies, click here -
+	  <a href="cookies-page.php">Accept Cookies</a>
+	</footer>

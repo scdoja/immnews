@@ -6,3 +6,8 @@
  username: <input type="text" name="username" />
  Password: <input type="text" name="password" />
 <input type="submit" />   </form>
+
+<footer>
+  IMM News Network Uses Cookies, click here -
+  <a href="cookies-page.php">Accept Cookies</a>
+</footer>

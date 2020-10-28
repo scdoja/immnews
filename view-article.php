@@ -1,28 +1,31 @@
+<?php
+session_start();
+if(isset($_SESSION["personId"])){
+?>
+
+<header>
+<img src="./images/logos/immlogo.png" width="120"/>
+<a href="home-page.php">Go to Back Home Page</a>
+</header><br>
+
 <head>
 <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 </head>
-<a href="home-page.php">Go to Back Home Page</a>
+
 <?php
 
 $articleId = $_GET["articleId"];
 
-//get person record form the database table
-$dsn = "mysql:host=localhost;dbname=immnew;charset=utf8mb4";
-
-$dbusername = "root";
-$dbpassword = "";
-$pdo = new PDO($dsn, $dbusername, $dbpassword);
+include('includes/db-config.php');
 
 $stmt = $pdo->prepare("SELECT * FROM `article`
 	WHERE `article`.`articleId` = $articleId;");
 
 $stmt->execute();
 
-($row = $stmt->fetch(PDO::FETCH_ASSOC))
-
-?><p>
-<br>
-<a href="likes.php?articleId=<?php echo($row["articleId"]); ?>">Like Article</a><br></p><?php
+$row = $stmt->fetch(PDO::FETCH_ASSOC);?>
+<img src="uploads/<?php echo($row["image"]); ?>" width="500" alt="image"><?php
+echo("<p>");
 echo("<h1>");
 echo($row["title"]);
 echo("</h1>");
@@ -35,12 +38,23 @@ echo("<h4>");
 echo("<label>Published: </label>".$row["date"]);
 echo("</h4>");
 
-?>
-<img src="uploads/<?php echo($row["image"]); ?>" width="500" alt="image">
-<?php
-echo("<p>");
-	echo($row["content"]);
-echo("</p>");
+echo($row["content"]);
 
+echo("</p>");?>
+
+<a href="<?php echo($row['articleLink']);?>" target = "_blank">External Article Link</a>
+
+<?php
+}else{?>
+<p> Please Login to view Full Articles. </p>
+<a href = "login-page.php">Login Here </a>
+<?php
+}
 ?>
-<a href="<?php echo($row['articleLink']);?>">External Article Link</a>
+
+<p>
+<footer>
+  IMM News Network Uses Cookies, click here -
+  <a href="cookies-page.php">Accept Cookies</a>
+</footer>
+</p>

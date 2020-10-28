@@ -1,9 +1,3 @@
-<?php
-session_start();
-if(isset($_SESSION["personId"])) {
-
-?>
-
 <head>
 <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 </head>
@@ -40,13 +34,7 @@ if(isset($_SESSION["personId"])) {
 		<br><a href="view-article.php?articleId=<?php echo($row["articleId"]); ?>">View Full Article</a><?php
 
 }
-}else{
-	?>
-	<p> Please Login to view Articles. </p>
-	<a href = "login-page.php">Login</a><br><?php
-}
 ?>
-<br>
 <footer>
   IMM News Network Uses Cookies, click here -
   <a href="cookies-page.php">Accept Cookies</a>
