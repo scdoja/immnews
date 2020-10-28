@@ -1,3 +1,6 @@
+<head>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+</head>
 <?php
 session_start();
 //process-login.php
@@ -17,13 +20,13 @@ $stmt->execute();
 
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-if($row["userType"] == 'admin') {
+if($row["userType"] == "admin") {
 	//successful username/password combination
 	$_SESSION["personId"] = $row["personId"];
+	$_SESSION["userType"] = $row["userType"];
 	?><p>Welcome Admin!</p>
 	<a href="admin-dashboard.php">Go to Admin Article Dashboard</a><?php
 }else{
-	$_SESSION["personId"] = $row["personId"];
 	?><p>Welcome User/Public to IMM News Network!</p>
 	<a href="home-page.php">Go to Homepage</a><?php
 }

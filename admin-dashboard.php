@@ -1,13 +1,22 @@
+<?php
+session_start();
+if(isset($_SESSION["personId"])) {
+
+
+?>
 <html>
 <h2>Admin Dashboard</h2>
 <nav>
 <a href="home-page.php">Home Page</a>   |
-<a href="article-page.php?articleId">Add New Article</a>   |
+<a href="upload-page.php">Add New Article</a>   |
 <a href="contact-page-submissions.php?articleId">Contact Form Submissions</a> |
 <a href="admin-about-page.php">Edit About Page</a>
 </nav>
 
+<h3>Articles</h3>
+
 <?php
+
 	include('includes/db-config.php');
 
 	$stmt = $pdo->prepare("SELECT * FROM `article`");
@@ -16,7 +25,6 @@
 
 	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 		//print_r($row); // recursively print out object.
-		echo("<h3>Articles</h3>");
 		echo("<p>");
 		echo("<label>Article ID:</label>".$row["articleId"]."<br>");
 		echo("
@@ -34,5 +42,10 @@
 		<a href="feature-article.php?articleId=<?php echo($row["articleId"]); ?>">Set Feature</a>
 		<?php
 		echo("</p>");
-	}
+}
+}else{
+	?>
+	<p> ACCESS DENIED. Go Home </p>
+	<a href = "home-page.php">Home</a><?php
+}
 ?>

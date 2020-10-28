@@ -1,3 +1,6 @@
+<head>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+</head>
 <?php ?>
 <form action="process-login-page.php" method="POST">
  username: <input type="text" name="username" />

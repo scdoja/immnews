@@ -1,3 +1,6 @@
+<head>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+</head>
 <nav>
 	<img src="./images/logos/immlogo.png" width="120"/>
 	<a href="home-page.php">Home Page</a> |

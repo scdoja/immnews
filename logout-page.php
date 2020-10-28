@@ -1,3 +1,6 @@
+<head>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+</head>
 <?php
 	//logout.php
 	session_start();

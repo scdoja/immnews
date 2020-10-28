@@ -16,7 +16,8 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <form action="process-edit-about-page.php" method="POST">
 
-<input type="text" name="content" value="<?php echo($row["content"]);?>"/>
+<textarea type="text" name="content" value="<?php echo($row["content"]);?>">
+</textarea>
 
 <input type="hidden" name="aboutId" value="<?php echo($row["aboutId"]);?>">
 

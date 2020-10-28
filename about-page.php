@@ -1,3 +1,6 @@
+<head>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+</head>
 <header>
 <nav>
 <img src="./images/logos/immlogo.png" width="120"/>

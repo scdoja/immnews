@@ -1,5 +1,7 @@
+<head>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+</head>
 <a href="home-page.php">Go to Back Home Page</a>
-
 <?php
 
 $articleId = $_GET["articleId"];
@@ -32,11 +34,10 @@ echo("<label>Published: </label>".$row["date"]);
 echo("</h4>");
 
 ?><!DOCTYPE html>
-<img src="<?php echo($row['image']);?>" width="450"/><?php
+<img src="uploads/<?php echo($row["image"]); ?>" width="500" alt="image"><?php
 echo("<p>");
 	echo($row["content"]);
 echo("</p>");
 
 ?>
-
-<a href="<?php echo($row['articleLink']);?>">Article Link</a><br>
+<a href="<?php echo($row['articleLink']);?>">External Article Link</a><br>

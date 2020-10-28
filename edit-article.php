@@ -1,3 +1,8 @@
+<form method="POST"
+enctype="multipart/form-data"
+action="process-edit-article.php">
+	File: <input type="file" name="image" id="image" />
+
 <?php
 //edit-person.php?personId=5
 
@@ -16,16 +21,17 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 //show a form with prefilled info that we can change
 ?>
+
 <form action="process-edit-article.php" method="POST">
 
-    category: <label for="category">Select Article Category:</label>
+    <label for="category">Select Article Category:</label>
 		<select name="category" id="category">
 		<option value="industry">Industry</option>
 		<option value="technical">Technical</option>
 		<option value="career">Career</option>
 	</select>
 
-    author: <input type="text" name="author" value="<?php echo($row["author"]);?>"/>
+	author: <input type="text" name="author" value="<?php echo($row["author"]);?>"/>
 
     title: <input type="text" name="title" value="<?php echo($row["title"]);?>"/>
 
@@ -35,7 +41,8 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
     articleLink: <input type="url" name="articleLink" value="<?php echo($row["articleLink"]);?>"/>
 
-    <input type="hidden" name="articleId" value="<?php echo($row["articleId"]);?>">
+
+	<input type="hidden" name="articleId" value="<?php echo($row["articleId"]);?>">
 
 	<input type="submit" />
 </form>
