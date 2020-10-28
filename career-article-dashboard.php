@@ -21,6 +21,8 @@
 	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 		//print_r($row); // recursively print out object.
 		echo("<p>");
+		?><!DOCTYPE html>
+        <img src="uploads/<?php echo($row['image']);?>" width="300"/><br><?php
 		echo("
         <label>Article Category:</label>".$row["category"]."<br>
 		<label>Author:</label> ".$row["author"]."<br>

@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION["personId"])) {
+
+?>
+
 <head>
 <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 </head>
@@ -21,6 +27,8 @@
 	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 		//print_r($row); // recursively print out object.
 		echo("<p>");
+		?><!DOCTYPE html>
+        <img src="uploads/<?php echo($row['image']);?>" width="300"/><br><?php
 		echo("
         <label>Article Category:</label>".$row["category"]."<br>
 		<label>Author:</label> ".$row["author"]."<br>
@@ -30,8 +38,15 @@
 		<label>Article URL:</label>".$row["articleLink"]);
 		?>
 		<br><a href="view-article.php?articleId=<?php echo($row["articleId"]); ?>">View Full Article</a><?php
+
+}
+}else{
+	?>
+	<p> Please Login to view Articles. </p>
+	<a href = "login-page.php">Login</a><br><?php
 }
 ?>
+<br>
 <footer>
   IMM News Network Uses Cookies, click here -
   <a href="cookies-page.php">Accept Cookies</a>

@@ -18,12 +18,14 @@ $stmt = $pdo->prepare("SELECT * FROM `article`
 
 $stmt->execute();
 
-$row = $stmt->fetch(PDO::FETCH_ASSOC);
+($row = $stmt->fetch(PDO::FETCH_ASSOC))
 
+?><p>
+<br>
+<a href="likes.php?articleId=<?php echo($row["articleId"]); ?>">Like Article</a><br></p><?php
 echo("<h1>");
 echo($row["title"]);
 echo("</h1>");
-
 
 echo("<h3>");
 echo("<label>By: </label>".$row["author"]);
@@ -33,11 +35,12 @@ echo("<h4>");
 echo("<label>Published: </label>".$row["date"]);
 echo("</h4>");
 
-?><!DOCTYPE html>
-<img src="uploads/<?php echo($row["image"]); ?>" width="500" alt="image"><?php
+?>
+<img src="uploads/<?php echo($row["image"]); ?>" width="500" alt="image">
+<?php
 echo("<p>");
 	echo($row["content"]);
 echo("</p>");
 
 ?>
-<a href="<?php echo($row['articleLink']);?>">External Article Link</a><br>
+<a href="<?php echo($row['articleLink']);?>">External Article Link</a>

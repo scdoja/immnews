@@ -18,7 +18,6 @@
 <h2>Homepage</h2>
 <h3>Welcome to IMM News Network</h3>
 <p>Sheridan College's News Network for all things Interactive! Browse from Industry, Technical and Career article content. </p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RkwPzCO-BY0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
 <p>
 <a href="industry-article-dashboard.php">Industry Articles</a>   |
 <a href="tech-article-dashboard.php">Technical Articles</a>   |
@@ -45,6 +44,8 @@
 		<?php
 	}
     ?>
+    <h3>Video</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RkwPzCO-BY0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
 <p>
 <table>
     <tr>
