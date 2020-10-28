@@ -1,3 +1,17 @@
+<head>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+</head>
+<header>
+<nav>
+<img src="./images/logos/immlogo.png" width="120"/>
+<a href="home-page.php">Home Page</a>   |
+<a href="about-page.php">About Page</a> |
+<a href="contact-page.php">Contact Page</a>
+</nav>
+</header><br>
+
+<h2>Register New User</h2>
+
 <?php?>
 <!DOCTYPE html>
 	<html>

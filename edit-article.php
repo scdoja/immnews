@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(isset($_SESSION["personId"])) {
+?>
+
+<head>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+</head>
+
 <form method="POST"
 enctype="multipart/form-data"
 action="process-edit-article.php">
@@ -46,3 +55,10 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 	<input type="submit" />
 </form>
+<?php
+}else{
+	?>
+	<p> ACCESS DENIED. Go Home </p>
+	<a href = "home-page.php">Home</a><?php
+}
+?>

@@ -1,4 +1,13 @@
 <?php
+session_start();
+if(isset($_SESSION["personId"])) {
+?>
+
+<head>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+</head>
+
+<?php
 //delete-person.php?personId=5
 
 //receive GET variables
@@ -27,3 +36,10 @@ echo("<label>Article Date: </label>" .$row["date"]."<br>");
 	<input type="hidden" name="articleId" value="<?php echo($row["articleId"]);?>">
 	<input type="submit" value="CONFIRM DELETE" />
 </form>
+<?php
+}else{
+	?>
+	<p> ACCESS DENIED. Go Home </p>
+	<a href = "home-page.php">Home</a><?php
+}
+?>

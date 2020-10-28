@@ -2,14 +2,16 @@
 session_start();
 if(isset($_SESSION["personId"])) {
 
-
 ?>
+<head>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+</head>
 <html>
 <h2>Admin Dashboard</h2>
 <nav>
 <a href="home-page.php">Home Page</a>   |
 <a href="upload-page.php">Add New Article</a>   |
-<a href="contact-page-submissions.php?articleId">Contact Form Submissions</a> |
+<a href="contact-page-submissions.php">Contact Form Submissions</a> |
 <a href="admin-about-page.php">Edit About Page</a>
 </nav>
 

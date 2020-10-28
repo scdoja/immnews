@@ -1,4 +1,13 @@
 <?php
+session_start();
+if(isset($_SESSION["personId"])) {
+?>
+
+<head>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+</head>
+
+<?php
 
 $articleId = $_GET["articleId"];
 
@@ -28,3 +37,10 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 </form>
 </select>
+<?php
+}else{
+	?>
+	<p> ACCESS DENIED. Go Home </p>
+	<a href = "home-page.php">Home</a><?php
+}
+?>

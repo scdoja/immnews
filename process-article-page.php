@@ -1,3 +1,7 @@
+<head>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+</head>
+
 <?php
     $category = $_POST["category"];
     $author = $_POST["author"];

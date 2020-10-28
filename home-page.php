@@ -8,7 +8,8 @@
     <a href="about-page.php">About Page</a> |
     <a href="contact-page.php">Contact Page</a> |
     <a href="register-page.php">Register</a>   |
-    <a href="login-page.php">Login</a>
+    <a href="login-page.php">Login</a> |
+    <a href="logout-page.php">Logout</a>
 </nav>
 </header>
 

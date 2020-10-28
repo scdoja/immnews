@@ -1,3 +1,7 @@
+<head>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+</head>
+
 <?php
 //edit-person.php?personId=5
 

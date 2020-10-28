@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(isset($_SESSION["personId"])) {
+?>
+
+<head>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+</head>
+
 <form method="POST"
 enctype="multipart/form-data"
 action="process-article-page.php">
@@ -36,3 +45,12 @@ action="process-article-page.php">
 
 <input type="submit" value="CONFIRM ADD">
 </form>
+</html>
+<?php
+
+}else{
+	?>
+	<p> ACCESS DENIED. Go Home </p>
+	<a href = "home-page.php">Home</a><?php
+}
+?>

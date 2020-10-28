@@ -1,3 +1,13 @@
+<head>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+</head>
+
+<?php
+session_start();
+if(isset($_SESSION["personId"])) {
+
+
+?>
 <html>
 <h2>About Page</h2>
 
@@ -16,4 +26,9 @@
 		<?php
 		echo("</p>");
 	}
+}else{
+	?>
+	<p> ACCESS DENIED. Go Home </p>
+	<a href = "home-page.php">Home</a><?php
+}
 ?>
