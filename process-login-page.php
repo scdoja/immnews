@@ -1,14 +1,12 @@
 <head>
+<title>IMM News Network - Process Login Page</title>
 <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 </head>
+
 <?php
 session_start();
-//process-login.php
-//receive post variables
 $username = $_POST["username"];
 $password = $_POST["password"];
-
-//check the username and password against the database records
 
 include('includes/db-config.php');
 
@@ -21,7 +19,6 @@ $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if($row["userType"] == "admin") {
-	//successful username/password combination
 	$_SESSION["personId"] = $row["personId"];
 	$_SESSION["userType"] = $row["userType"];
 	?><p>Welcome Admin!</p>

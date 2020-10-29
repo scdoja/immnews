@@ -1,11 +1,9 @@
 <head>
+<title>IMM News Network - Process Contact Page</title>
 <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 </head>
 
 <?php
-//process-contact-trader_cdlseparatinglines.php
-
-    //receive input
     $firstName = $_POST["firstName"];
     $lastName = $_POST["lastName"];
     $emailAddress = $_POST["emailAddress"];
@@ -22,4 +20,4 @@
     $stmt->execute();
 ?>
 
-    <p>Thank you for contacting us, we will get back to you!</p><a href="contact-page.php">Back to Contact Form</a>
+    <p>Thank you for contacting us, we will get back to you!</p><a href="home-page.php">Go Back Home</a>

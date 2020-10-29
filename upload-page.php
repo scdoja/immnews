@@ -1,11 +1,14 @@
+<!DOCTYPE html>
+<head>
+<title>IMM News Network - Add New Article</title>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/>
+</head>
+</html>
+
 <?php
 session_start();
 if(isset($_SESSION["personId"])) {
 ?>
-
-<head>
-<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
-</head>
 
 <form method="POST"
 enctype="multipart/form-data"
@@ -37,13 +40,13 @@ action="process-article-page.php">
 <p>
 <label for="category">Select Article Category:</label>
 	<select name="category" id="category">
-	<option value="industry">Industry</option>
-	<option value="technical">Technical</option>
-	<option value="career">Career</option>
+		<option value="industry">Industry</option>
+		<option value="technical">Technical</option>
+		<option value="career">Career</option>
 </select>
 </p>
 
-<input type="submit" value="CONFIRM ADD">
+	<input type="submit" value="CONFIRM ADD">
 </form>
 </html>
 <?php

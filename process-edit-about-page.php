@@ -1,15 +1,12 @@
 <head>
+<title>IMM News Network - Process Edit About Page</title>
 <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 </head>
 
 <?php
-//process-edit-person.php
-
-//receive POST data from edit form
 $aboutId = $_POST["aboutId"];
 $content = $_POST["content"];
 
-//update person record (row) with the edit form data
 include('includes/db-config.php');
 
 $stmt = $pdo->prepare("UPDATE `about` SET `content` = '$content'

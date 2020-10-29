@@ -1,4 +1,5 @@
 <head>
+<title>IMM News Network - Process Article Page</title>
 <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 </head>
 

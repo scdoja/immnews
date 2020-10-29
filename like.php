@@ -3,8 +3,8 @@ session_start();
 if(isset($_SESSION["personId"])){
 ?>
 
-
 <head>
+<title>IMM News Network - Like Process</title>
 <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 </head>
 
@@ -22,10 +22,9 @@ VALUES (NULL, '$personId', '$articleId');");
 
 $stmt->execute();
 
-?>
+header('Location: home-page.php');
 
-You liked this Article! Return home:
-<a href="home-page.php">Back to Homepage</a>
+?>
 
 <?php
 }else{?>

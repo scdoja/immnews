@@ -1,6 +1,14 @@
+<!DOCTYPE html>
 <head>
-<link rel='icon' href='favicon.ico' type='image/x-icon'/>
+	<title>IMM News Network - Articles</title>
+	<meta charset="utf-8">
+	<meta name="description" content="IMM News Network - Articles">
+	<meta name="keywords" content="news, articles, IMM, career, industry, technical">
+	<link rel="author" content="Jason Do"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='icon' href='favicon.ico' type='image/x-icon'/>
 </head>
+</html>
 
 <header>
 <img src="./images/logos/immlogo.png" width="120"/>
@@ -25,6 +33,7 @@ $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
 <img src="uploads/<?php echo($row["image"]); ?>" width="500" alt="image"><?php
 echo("<p>");
+
 	echo("<h1>");
 	echo($row["title"]);
 	echo("</h1>");
@@ -44,18 +53,20 @@ echo("</p>");
 ?>
 
 <a href="<?php echo($row['articleLink']);?>" target = "_blank">External Article Link</a><p>
-
+<p>
 	<form action = "like.php?articleId=<?php echo($row["articleId"]);?>" method="POST" enctype="multipart/form-data">
 		<input type = "hidden" value = "<?php echo ($personId);?>">
 		<input type = "hidden" value = "<?php echo ($articleId);?>">
 		<input type = "submit" name= "like" value = "Like">
 	</form>
-
+</p>
+<p>
 	<form action = "unlike.php?articleId=<?php echo($row["articleId"]);?>" method="POST" enctype="multipart/form-data">
 		<input type = "hidden" value = "<?php echo ($personId);?>">
 		<input type = "hidden" value = "<?php echo ($articleId);?>">
 		<input type = "submit" name = "unlike" value = "Unlike">
 	</form>
+</p>
 
 <?php
 $personId = $_SESSION["personId"];
@@ -87,7 +98,6 @@ $stmt->execute();
 <?php
 
 }
-
 ?>
 
 <footer>

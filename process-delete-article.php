@@ -1,11 +1,9 @@
 <head>
+<title>IMM News Network - Process Delete Article</title>
 <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 </head>
 
 <?php
-//process-delete-person.php
-
-//receive POST data from delete form
 $articleId = $_POST["articleId"];
 
 include('includes/db-config.php');

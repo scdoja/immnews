@@ -20,10 +20,11 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <form action="process-edit-about-page.php" method="POST">
 
-<textarea type="text" name="content" value="<?php echo($row["content"]);?>">
-</textarea>
+    <textarea type="text" name="content" value="<?php echo($row["content"]);?>">
+    </textarea>
 
-<input type="hidden" name="aboutId" value="<?php echo($row["aboutId"]);?>">
+    <input type="hidden" name="aboutId" value="<?php echo($row["aboutId"]);?>">
 
-<input type="submit" value="CONFIRM EDIT" />
+    <input type="submit" value="CONFIRM EDIT" />
+
 </form>

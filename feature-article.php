@@ -1,17 +1,19 @@
+<!DOCTYPE html>
+<head>
+<title>IMM News Network - Feature Article</title>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/>
+</head>
+</html>
+
 <?php
 session_start();
 if(isset($_SESSION["personId"])) {
 ?>
 
-<head>
-<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
-</head>
-
 <?php
 
 $articleId = $_GET["articleId"];
 
-//get person record form the database table
 include('includes/db-config.php');
 
 $stmt = $pdo->prepare("SELECT * FROM `article`
@@ -37,7 +39,9 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 </form>
 </select>
+
 <?php
+
 }else{
 	?>
 	<p> ACCESS DENIED. Go Home </p>

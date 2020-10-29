@@ -3,8 +3,8 @@ session_start();
 if(isset($_SESSION["personId"])){
 ?>
 
-
 <head>
+<title>IMM News Network - Unlike Process</title>
 <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 </head>
 
@@ -23,9 +23,9 @@ $stmt = $pdo->prepare("DELETE FROM `likes`
 
 $stmt->execute();
 
-?>
+header('Location: home-page.php');
 
-<a href="home-page.php">Back to Homepage</a>
+?>
 
 <?php
 }else{?>
