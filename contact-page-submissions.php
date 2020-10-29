@@ -1,8 +1,4 @@
 <?php
-include("includes/header.html");
-?>
-
-<?php
 session_start();
 if(isset($_SESSION["personId"])) {
 ?>
