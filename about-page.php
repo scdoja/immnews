@@ -1,16 +1,7 @@
-<head>
-<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
-</head>
-<header>
-<nav>
-<img src="./images/logos/immlogo.png" width="120"/>
-<a href="home-page.php">Home Page</a>   |
-<a href="about-page.php">About Page</a> |
-<a href="contact-page.php">Contact Page</a>
-</nav>
-</header>
+<?php
+include("includes/header.html");
+?>
 
-<html>
 <h2>About Page</h2>
 
 <?php

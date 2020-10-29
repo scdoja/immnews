@@ -8,4 +8,3 @@
 ?>
 <p>You have successfully logged out.</p>
 <a href="login-page.php">Login here</a>
-<a href="home-page.php">Home Page</a>

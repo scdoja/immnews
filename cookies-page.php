@@ -1,5 +1,6 @@
-<head>
-<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
-</head>
-
+<?php
+include("includes/header.html");
+?>
+<br>
 #
+</br>

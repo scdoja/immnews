@@ -1,13 +1,18 @@
+<head>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/>
+</head>
+
 <?php
 session_start();
 if(isset($_SESSION["personId"])) {
 
 ?>
-<head>
-<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
-</head>
-<html>
+<header>
+<img src="./images/logos/immlogo.png" width="120"/>
+</header>
+
 <h2>Admin Dashboard</h2>
+
 <nav>
 <a href="home-page.php">Home Page</a>   |
 <a href="upload-page.php">Add New Article</a>   |
@@ -27,24 +32,25 @@ if(isset($_SESSION["personId"])) {
 
 	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 		//print_r($row); // recursively print out object.
-		echo("<p>");
-		echo("<label>Article ID:</label>".$row["articleId"]."<br>");
+echo("<p>");
 		echo("
+		<label>Article ID:</label>".$row["articleId"]."<br>
         <label>Article Category:</label>".$row["category"]."<br>
 		<label>Author:</label> ".$row["author"]."<br>
 		<label>Article Title:</label>".$row["title"]."<br>
 		<label>Article Preview:</label> ".$row["preview"]."<br>
 		<label>Article Date:</label> ".$row["date"]."<br>
 		<label>Article URL:</label>".$row["articleLink"]."<br>
-		<label>Feature:</label>".$row["feature"]."<br>");
-		?>
+		<label>Featured:</label>".$row["feature"]."<br>");
+?>
 		<a href="view-article.php?articleId=<?php echo($row["articleId"]); ?>">View</a>
 		<a href="edit-article.php?articleId=<?php echo($row["articleId"]); ?>">Edit</a>
 		<a href="delete-article.php?articleId=<?php echo($row["articleId"]); ?>">Delete</a>
 		<a href="feature-article.php?articleId=<?php echo($row["articleId"]); ?>">Set Feature</a>
-		<?php
-		echo("</p>");
+<?php
+
 }
+
 }else{
 	?>
 	<p> ACCESS DENIED. Go Home </p>

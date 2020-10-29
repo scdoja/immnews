@@ -4,7 +4,7 @@ if(isset($_SESSION["personId"])) {
 ?>
 
 <head>
-<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+<link rel='icon' href='favicon.ico' type='image/x-icon'/>
 </head>
 
 <form method="POST"

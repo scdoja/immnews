@@ -9,7 +9,7 @@
     <a href="contact-page.php">Contact Page</a> |
     <a href="register-page.php">Register</a>   |
     <a href="login-page.php">Login</a> |
-    <a href="logout-page.php">Logout</a>
+    <a href="logout-page.php">Logout</a>    |
 </nav>
 </header>
 
@@ -40,7 +40,8 @@
         echo("<p>");
 		echo("<label>Article Category:</label>".$row["category"]."<br><label>Article Title:</label>".$row["title"]."<br><label>Article Preview:</label>".$row["preview"]."<br><label>Article Date:</label> ".$row["date"]);
 		?>
-		<br><a href="view-article.php?articleId=<?php echo($row["articleId"]); ?>">View Full Article</a>
+        <br><a href="public-view-article.php?articleId=<?php echo($row["articleId"]); ?>"> View Public Verison</a>
+		<a href="view-article.php?articleId=<?php echo($row["articleId"]); ?>"> View Full Article</a>
 		<?php
 	}
     ?>

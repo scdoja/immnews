@@ -1,15 +1,10 @@
-<head>
-<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
-</head>
-<nav>
-	<img src="./images/logos/immlogo.png" width="120"/>
-	<a href="home-page.php">Home Page</a> |
-	<a href="about-page.php">About Page</a> |
-	<a href="contact-page.php">Contact Page</a>
-</nav>
+<?php
+include("includes/header.html");
+?>
 
 <html>
 <h2>Industry Articles</h2>
+</html
 
 <?php
 	include('includes/db-config.php');
@@ -21,8 +16,9 @@
 	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 		//print_r($row); // recursively print out object.
 		echo("<p>");
-		?><!DOCTYPE html>
-        <img src="uploads/<?php echo($row['image']);?>" width="300"/><br><?php
+?>
+		<img src="uploads/<?php echo($row['image']);?>" width="300"/><br>
+<?php
 		echo("
         <label>Article Category:</label>".$row["category"]."<br>
 		<label>Author:</label> ".$row["author"]."<br>
@@ -30,11 +26,15 @@
 		<label>Article Preview:</label> ".$row["preview"]."<br>
 		<label>Article Date:</label> ".$row["date"]."<br>
 		<label>Article URL:</label>".$row["articleLink"]);
-		?>
-		<br><a href="view-article.php?articleId=<?php echo($row["articleId"]); ?>">View Full Article</a><?php
+?>
+		<br><a href="public-view-article.php?articleId=<?php echo($row["articleId"]); ?>"> View Public Verison</a>
+		<a href="view-article.php?articleId=<?php echo($row["articleId"]); ?>">View Full Article</a>
+		</p>
+<?php
 
 }
 ?>
+
 <footer>
   IMM News Network Uses Cookies, click here -
   <a href="cookies-page.php">Accept Cookies</a>

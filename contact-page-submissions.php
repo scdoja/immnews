@@ -10,14 +10,15 @@ if(isset($_SESSION["personId"])) {
 <?php
 include('includes/db-config.php');
 
-$stmt = $pdo->prepare("SELECT * FROM `person`");
+$stmt = $pdo->prepare("SELECT * FROM `contact`");
 
 $stmt->execute();
 
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     //print_r($row); // recursively print out object.
     echo("<p>");
-    echo($row["personId"]." ".$row["firstName"]." ".$row["lastName"]." ".$row["emailAddress"]." ".$row["DOB"]." ".$row["userType"]); //or $row[0];
+    echo(
+        $row["firstName"]." ".$row["lastName"]." ".$row["emailAddress"]." ".$row["category1"]." ".$row["category2"]." ".$row["category3"]." ".$row["role"]); //or $row[0];
     ?>
     <?php
 }
