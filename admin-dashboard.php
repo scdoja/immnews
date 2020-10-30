@@ -21,7 +21,7 @@ if(isset($_SESSION["personId"])) {
 
 ?>
 
-<h2>Admin Dashboard</h2>
+	<h2>Admin Dashboard</h2>
 
 <nav>
 	<a href="home-page.php">Home Page</a>   |
@@ -29,8 +29,7 @@ if(isset($_SESSION["personId"])) {
 	<a href="contact-page-submissions.php">Contact Form Submissions</a> |
 	<a href="admin-about-page.php">Edit About Page</a>
 </nav>
-
-<h3>Articles</h3>
+	<h3>Articles</h3>
 </html>
 
 <?php

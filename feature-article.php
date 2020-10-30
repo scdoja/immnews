@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
-<title>IMM News Network - Feature Article</title>
-<link rel='icon' href='favicon.ico' type='image/x-icon'/>
+	<title>IMM News Network - Feature Article</title>
+	<link rel='icon' href='favicon.ico' type='image/x-icon'/>
 </head>
 </html>
 
@@ -12,19 +12,19 @@ if(isset($_SESSION["personId"])) {
 
 <?php
 
-$articleId = $_GET["articleId"];
+	$articleId = $_GET["articleId"];
 
-include('includes/db-config.php');
+	include('includes/db-config.php');
 
-$stmt = $pdo->prepare("SELECT * FROM `article`
+	$stmt = $pdo->prepare("SELECT * FROM `article`
 	WHERE `article`.`articleId` = $articleId;");
 
-$stmt->execute();
+	$stmt->execute();
 
-$row = $stmt->fetch(PDO::FETCH_ASSOC);
+	$row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 ?>
-<form action="process-feature-page.php" method="POST">
+	<form action="process-feature-page.php" method="POST">
 
     <label for="feature">Feature Article:</label>
     	<select name="feature" id="feature">

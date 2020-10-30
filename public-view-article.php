@@ -25,17 +25,17 @@
 
 <?php
 
-$articleId = $_GET["articleId"];
+	$articleId = $_GET["articleId"];
 
-include('includes/db-config.php');
+	include('includes/db-config.php');
 
-$stmt = $pdo->prepare("SELECT * FROM `article`
+	$stmt = $pdo->prepare("SELECT * FROM `article`
 	WHERE `article`.`articleId` = $articleId;");
 
-$stmt->execute();
+	$stmt->execute();
 
-$row = $stmt->fetch(PDO::FETCH_ASSOC);?>
-	<img src="uploads/<?php echo($row["image"]); ?>" width="500" alt="image"><?php
+	$row = $stmt->fetch(PDO::FETCH_ASSOC);?>
+		<img src="uploads/<?php echo($row["image"]); ?>" width="500" alt="image"><?php
 
 echo("<p>");
 

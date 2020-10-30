@@ -16,15 +16,16 @@ if(isset($_SESSION["personId"])) {
 ?>
 
 <?php
-include('includes/db-config.php');
+	include('includes/db-config.php');
 
-$stmt = $pdo->prepare("SELECT * FROM `contact`");
+	$stmt = $pdo->prepare("SELECT * FROM `contact`");
 
-$stmt->execute();
+	$stmt->execute();
 
-while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    echo("<p>");
-    echo($row["firstName"]." ".$row["lastName"]." ".$row["emailAddress"]." ".$row["category1"]." ".$row["category2"]." ".$row["category3"]." ".$row["role"]);
+	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+		echo("<p>");
+    		echo($row["firstName"]." ".$row["lastName"]." ".$row["emailAddress"]." ".$row["category1"]." ".$row["category2"]." ".$row["category3"]." ".$row["role"]);
+		echo("</p>")
 ?>
 <?php
 }

@@ -1,6 +1,6 @@
 <head>
-<title>IMM News Network - Process Register Page</title>
-<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+    <title>IMM News Network - Process Register Page</title>
+    <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 </head>
 
 <?php

@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <head>
-<title>IMM News Network - Edit Article</title>
-<link rel='icon' href='favicon.ico' type='image/x-icon'/>
+	<title>IMM News Network - Edit Article</title>
+	<link rel='icon' href='favicon.ico' type='image/x-icon'/>
 </head>
 </html>
 
 <?php
 session_start();
 if(isset($_SESSION["personId"])) {
-?>
 
-<form method="POST"
-enctype="multipart/form-data"
-action="process-edit-article.php">
+?>
+	<form method="POST"
+	enctype="multipart/form-data"
+	action="process-edit-article.php">
 	File: <input type="file" name="image" id="image"/>
 
 <?php
-$articleId = $_GET["articleId"];
 
-include('includes/db-config.php');
+	$articleId = $_GET["articleId"];
 
-$stmt = $pdo->prepare("SELECT * FROM `article`
+	include('includes/db-config.php');
+
+	$stmt = $pdo->prepare("SELECT * FROM `article`
 	WHERE `articleId` = $articleId;");
 
-$stmt->execute();
+	$stmt->execute();
 
-$row = $stmt->fetch(PDO::FETCH_ASSOC);
+	$row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 ?>
 

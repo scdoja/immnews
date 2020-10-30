@@ -1,18 +1,18 @@
 <head>
-<title>IMM News Network - Process Login Page</title>
-<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+	<title>IMM News Network - Process Login Page</title>
+	<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 </head>
 
 <?php
 session_start();
-$username = $_POST["username"];
-$password = $_POST["password"];
+	$username = $_POST["username"];
+	$password = $_POST["password"];
 
-include('includes/db-config.php');
+	include('includes/db-config.php');
 
-$stmt = $pdo->prepare("SELECT * FROM `person`
+	$stmt = $pdo->prepare("SELECT * FROM `person`
 	WHERE `emailAddress` = '$username'
-	AND `password` = '$password'");
+		AND `password` = '$password'");
 
 $stmt->execute();
 

@@ -16,17 +16,16 @@ if(isset($_SESSION["personId"])) {
 ?>
 
 <?php
+	$articleId = $_GET["articleId"];
 
-$articleId = $_GET["articleId"];
+	include('includes/db-config.php');
 
-include('includes/db-config.php');
-
-$stmt = $pdo->prepare("SELECT * FROM `article`
+	$stmt = $pdo->prepare("SELECT * FROM `article`
 	WHERE `articleId` = $articleId");
 
-$stmt->execute();
+	$stmt->execute();
 
-$row = $stmt->fetch(PDO::FETCH_ASSOC);
+	$row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 ?><h1>Are you sure you want to delete the following record?</h1><?php
 	echo("<label>Article Category: </label>" .$row["category"]."<p>"."<br>");

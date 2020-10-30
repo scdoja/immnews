@@ -11,11 +11,11 @@
 </html>
 
 <?php
-include("includes/header.html");
+	include("includes/header.html");
 ?>
 
 <html>
-<h2>Industry Articles</h2>
+	<h2>Industry Articles</h2>
 </html
 
 <?php

@@ -4,26 +4,26 @@ if(isset($_SESSION["personId"])){
 ?>
 
 <head>
-<title>IMM News Network - Unlike Process</title>
-<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+    <title>IMM News Network - Unlike Process</title>
+    <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 </head>
 
 <?php
 
-$articleId = $_GET["articleId"];
+    $articleId = $_GET["articleId"];
 
-include('includes/db-config.php');
+    include('includes/db-config.php');
 
-$unlike = $_POST["unlike"];
-$personId = $_SESSION["personId"];
+    $unlike = $_POST["unlike"];
+    $personId = $_SESSION["personId"];
 
-$stmt = $pdo->prepare("DELETE FROM `likes`
+    $stmt = $pdo->prepare("DELETE FROM `likes`
     WHERE `likes`.`personId` = $personId
     AND `likes`.`articleId` = $articleId");
 
-$stmt->execute();
+    $stmt->execute();
 
-header('Location: home-page.php');
+    header('Location: home-page.php');
 
 ?>
 

@@ -1,6 +1,6 @@
 <head>
-<title>IMM News Network - Process Edit About Page</title>
-<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+    <title>IMM News Network - Process Edit About Page</title>
+    <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 </head>
 
 <?php

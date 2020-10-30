@@ -1,6 +1,6 @@
 <head>
-<title>IMM News Network - Process Edit Article</title>
-<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+    <title>IMM News Network - Process Edit Article</title>
+    <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 </head>
 
 <?php
@@ -13,7 +13,7 @@
     $articleId = $_POST["articleId"];
     $image = $_FILES["image"]["name"];
 
-include('includes/db-config.php');
+    include('includes/db-config.php');
 
     $stmt = $pdo->prepare("UPDATE `article` SET `category` = '$category', `author` = '$author', `title` = '$title', `content` = '$content', `date` = '$date', `articleLink` = '$articleLink',
         `image` = '$image' WHERE `article`.`articleId` = $articleId");

@@ -11,11 +11,11 @@
 </html>
 
 <?php
-include("includes/header.html");
+	include("includes/header.html");
 ?>
 
 <!DOCTYPE html>
-<h2>Contact Page</h2>
+	<h2>Contact Page</h2>
 <body>
 		<form action="process-contact-page.php" method="POST">
 <p>
