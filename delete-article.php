@@ -30,15 +30,15 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 ?><h1>Are you sure you want to delete the following record?</h1><?php
 	echo("<label>Article Category: </label>" .$row["category"]."<p>"."<br>");
-	echo("<label>Article Title: </label>" .$row["title"]."<p>"."<br>");
-	echo("<label>Author: </label>" .$row["author"]."<p>"."<br>");
-	echo("<label>Article Content: </label>" .$row["content"]."<p>"."<br>");
-	echo("<label>Article Date: </label>" .$row["date"]."<br>");
+		echo("<label>Article Title: </label>" .$row["title"]."<p>"."<br>");
+			echo("<label>Author: </label>" .$row["author"]."<p>"."<br>");
+				echo("<label>Article Content: </label>" .$row["content"]."<p>"."<br>");
+					echo("<label>Article Date: </label>" .$row["date"]."<br>");
 ?>
 
 <form action="process-delete-article.php" method="POST">
 	<input type="hidden" name="articleId" value="<?php echo($row["articleId"]);?>">
-	<input type="submit" value="CONFIRM DELETE" />
+		<input type="submit" value="CONFIRM DELETE" />
 </form>
 
 <?php

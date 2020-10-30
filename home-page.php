@@ -18,7 +18,7 @@
     <a href="contact-page.php">Contact Page</a> |
     <a href="register-page.php">Register</a>   |
     <a href="login-page.php">Login</a> |
-    <a href="logout-page.php">Logout</a>   
+    <a href="logout-page.php">Logout</a>
 </nav>
 </header>
 
@@ -26,7 +26,7 @@
 <body>
 <h2>Homepage</h2>
     <h3>Welcome to IMM News Network</h3>
-    <p>Sheridan College's News Network for all things Interactive! Browse from Industry, Technical and Career article content. </p>
+    	<p>Sheridan College's News Network for all things Interactive! Browse from Industry, Technical and Career article content. </p>
 <p>
     <a href="industry-article-dashboard.php">Industry Articles</a>   |
     <a href="tech-article-dashboard.php">Technical Articles</a>   |
@@ -44,12 +44,12 @@
 	$stmt->execute();
 
 	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    echo("<h3>Featured Article</h3>");
+    	echo("<h3>Featured Article</h3>");
 
 ?><!DOCTYPE html>
         <img src="uploads/<?php echo($row['image']);?>" width="350"/><br></html><?php
         echo("<p>");
-		echo("<label>Article Category:</label>".$row["category"]."<br><label>Article Title:</label>".$row["title"]."<br><label>Article Preview:</label>".$row["preview"]."<br><label>Article Date:</label> ".$row["date"]);
+			echo("<label>Article Category:</label>".$row["category"]."<br><label>Article Title:</label>".$row["title"]."<br><label>Article Preview:</label>".$row["preview"]."<br><label>Article Date:</label> ".$row["date"]);
 ?>
         <br><a href="public-view-article.php?articleId=<?php echo($row["articleId"]); ?>"> View Public Verison</a>
 		<a href="view-article.php?articleId=<?php echo($row["articleId"]); ?>"> View Full Article</a>
@@ -57,7 +57,7 @@
 }
 ?>
     <h3>Video</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/RkwPzCO-BY0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+    	<iframe width="560" height="315" src="https://www.youtube.com/embed/RkwPzCO-BY0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
 
 <p>
 <table>
@@ -82,6 +82,6 @@
 <p>
 <footer>
       IMM News Network Uses Cookies, click here -
-      <a href="cookies-page.php">Accept Cookies</a>
+      	<a href="cookies-page.php">Accept Cookies</a>
 </footer>
 </p>

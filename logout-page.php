@@ -11,11 +11,10 @@
 </html>
 
 <?php
-	//logout.php
 	session_start();
  	session_destroy();
 ?>
 <html>
 <p>You have successfully logged out.</p>
-<a href="login-page.php">Login here</a>
+	<a href="login-page.php">Login here</a>
 </html>

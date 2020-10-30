@@ -16,7 +16,7 @@
 
 <?php
 	session_start();
-	if(isset($_SESSION["personId"])) {
+		if(isset($_SESSION["personId"])) {
 ?>
 
 <html>
@@ -33,21 +33,21 @@
 	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
 	echo("<p>");
-	echo($row["content"]);?>
-		<a href="edit-about-page.php?aboutId=<?php echo($row["aboutId"]); ?>">Edit</a><?php
+		echo($row["content"]);?>
+			<a href="edit-about-page.php?aboutId=<?php echo($row["aboutId"]); ?>">Edit</a><?php
 	echo("</p>");
 }
 
 }else{
 ?>
 	<p> ACCESS DENIED. Go Home </p>
-	<a href = "home-page.php">Back Home</a><?php
+		<a href = "home-page.php">Back Home</a><?php
 }
 ?>
 
 <p>
 <footer>
 	IMM News Network Uses Cookies, click here -
-	<a href="cookies-page.php">Accept Cookies</a>
+		<a href="cookies-page.php">Accept Cookies</a>
 </footer>
 </p>

@@ -26,12 +26,12 @@ include("includes/header.html");
 	$stmt->execute();
 
 	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-		//print_r($row); // recursively print out object.
-		echo("<p>");
+
+	echo("<p>");
 ?>
 		<img src="uploads/<?php echo($row['image']);?>" width="300"/><br>
 <?php
-		echo("
+	echo("
         <label>Article Category:</label>".$row["category"]."<br>
 		<label>Author:</label> ".$row["author"]."<br>
 		<label>Article Title:</label>".$row["title"]."<br>
@@ -49,5 +49,5 @@ include("includes/header.html");
 
 <footer>
   IMM News Network Uses Cookies, click here -
-  <a href="cookies-page.php">Accept Cookies</a>
+  	<a href="cookies-page.php">Accept Cookies</a>
 </footer>

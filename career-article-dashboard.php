@@ -51,6 +51,6 @@ include("includes/header.html");
 <p>
 <footer>
 	IMM News Network Uses Cookies, click here -
-	<a href="cookies-page.php">Accept Cookies</a>
+		<a href="cookies-page.php">Accept Cookies</a>
 </footer>
 </p>

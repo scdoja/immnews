@@ -1,14 +1,14 @@
+<!DOCTYPE html>
 <head>
+<title>IMM News Network - Edit About Page</title>
 <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 </head>
+</html>
 
 <?php
-//edit-person.php?personId=5
 
-//receive GET variables
 $aboutId = $_GET["aboutId"];
 
-//get person record form the database table
 include('includes/db-config.php');
 
 $stmt = $pdo->prepare("SELECT * FROM `about`");

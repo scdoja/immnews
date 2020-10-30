@@ -15,7 +15,7 @@ include("includes/header.html");
 ?>
 
 <html>
-<h2>Technical Articles</h2>
+	<h2>Technical Articles</h2>
 </html
 
 <?php
@@ -26,8 +26,8 @@ include("includes/header.html");
 	$stmt->execute();
 
 	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-		//print_r($row); // recursively print out object.
-		echo("<p>");
+
+	echo("<p>");
 ?>
 	<img src="uploads/<?php echo($row['image']);?>" width="300"/><br>
 <?php
@@ -47,7 +47,7 @@ include("includes/header.html");
 
 <p>
 <footer>
-  IMM News Network Uses Cookies, click here -
-  <a href="cookies-page.php">Accept Cookies</a>
+	IMM News Network Uses Cookies, click here -
+	<a href="cookies-page.php">Accept Cookies</a>
 </footer>
 </p>

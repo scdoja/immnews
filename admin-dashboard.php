@@ -9,6 +9,7 @@
 	<link rel='icon' href='favicon.ico' type='image/x-icon'/>
 </head>
 </html>
+
 <html>
 <header>
 	<img src="./images/logos/immlogo.png" width="120"/>
@@ -19,7 +20,6 @@ session_start();
 if(isset($_SESSION["personId"])) {
 
 ?>
-
 
 <h2>Admin Dashboard</h2>
 
@@ -44,7 +44,7 @@ if(isset($_SESSION["personId"])) {
 	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
 	echo("<p>");
-	echo("
+		echo("
 		<label>Article ID:</label>".$row["articleId"]."<br>
         <label>Article Category:</label>".$row["category"]."<br>
 		<label>Author:</label> ".$row["author"]."<br>
@@ -65,6 +65,6 @@ if(isset($_SESSION["personId"])) {
 }else{
 ?>
 	<p> ACCESS DENIED. Go Home </p>
-	<a href = "home-page.php">Back Home</a><?php
+		<a href = "home-page.php">Back Home</a><?php
 }
 ?>

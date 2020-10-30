@@ -29,8 +29,8 @@ header('Location: home-page.php');
 
 <?php
 }else{?>
-<p> Please Login to view Full Articles. </p>
-<a href = "login-page.php">Login Here </a>
+    <p> Please Login to view Full Articles. </p>
+    <a href = "login-page.php">Login Here </a>
 <?php
 }
 ?>

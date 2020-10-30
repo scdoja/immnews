@@ -13,17 +13,16 @@
 <header>
 <nav>
 <img src="./images/logos/immlogo.png" width="120"/>
-<a href="home-page.php">Home Page</a>   |
-<a href="about-page.php">About Page</a> |
-<a href="contact-page.php">Contact Page</a>
+	<a href="home-page.php">Home Page</a>   |
+	<a href="about-page.php">About Page</a> |
+	<a href="contact-page.php">Contact Page</a>
 </nav>
 </header>
 
 <!DOCTYPE html>
-<h2>Register New User</h2>
-	<body>
+	<h2>Register New User</h2>
+<body>
 	<form action="process-register-page.php" method="POST">
-		<!-- personId NOT needed because the database uses auto increment and takes care of the personId for us-->
 
         firstName: <input type="text" name="firstName" />
 
@@ -37,8 +36,8 @@
         DOB: <input type="text" name="DOB" /><br>
 </p>
 <p>
-    	<label for="userType">Register Your User Type:</label>
-    	<select name="userType" id="userType">
+    <label for="userType">Register Your User Type:</label>
+    <select name="userType" id="userType">
 		<option value="user" selected>User</option>
 		<option value="public">Public</option>
     </select>
@@ -49,8 +48,8 @@
 </html>
 
 <p>
-	<footer>
-	  IMM News Network Uses Cookies, click here -
-	  <a href="cookies-page.php">Accept Cookies</a>
-	</footer>
+<footer>
+	IMM News Network Uses Cookies, click here -
+	<a href="cookies-page.php">Accept Cookies</a>
+</footer>
 </p>

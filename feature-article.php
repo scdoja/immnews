@@ -27,7 +27,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 <form action="process-feature-page.php" method="POST">
 
     <label for="feature">Feature Article:</label>
-    <select name="feature" id="feature">
+    	<select name="feature" id="feature">
 
         <option value="0">Not Featured</option>
 
@@ -45,6 +45,6 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 }else{
 	?>
 	<p> ACCESS DENIED. Go Home </p>
-	<a href = "home-page.php">Home</a><?php
+		<a href = "home-page.php">Home</a><?php
 }
 ?>

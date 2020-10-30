@@ -59,6 +59,6 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 }else{
 	?>
 	<p> ACCESS DENIED. Go Home </p>
-	<a href = "home-page.php">Home</a><?php
+		<a href = "home-page.php">Home</a><?php
 }
 ?>

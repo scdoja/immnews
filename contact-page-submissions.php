@@ -24,8 +24,7 @@ $stmt->execute();
 
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     echo("<p>");
-    echo(
-    $row["firstName"]." ".$row["lastName"]." ".$row["emailAddress"]." ".$row["category1"]." ".$row["category2"]." ".$row["category3"]." ".$row["role"]); //or $row[0];
+    echo($row["firstName"]." ".$row["lastName"]." ".$row["emailAddress"]." ".$row["category1"]." ".$row["category2"]." ".$row["category3"]." ".$row["role"]);
 ?>
 <?php
 }

@@ -33,7 +33,6 @@ $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
 <img src="uploads/<?php echo($row["image"]); ?>" width="500" alt="image"><?php
 echo("<p>");
-
 	echo("<h1>");
 	echo($row["title"]);
 	echo("</h1>");
@@ -47,7 +46,6 @@ echo("<p>");
 	echo("</h4>");
 
 	echo($row["content"]);
-
 echo("</p>");
 
 ?>
@@ -77,7 +75,7 @@ $stmt = $pdo->prepare("SELECT * FROM `likes`
 
 $stmt->execute();
 	$row = $stmt->fetch(PDO::FETCH_ASSOC);?>
-	<img src="uploads/like.png<?php echo($row["likeicon"])?>" width="50" alt="likeicon">
+	<img src="icon/<?php echo($row["likeicon"]); ?>" width="50" alt="likeicon">
 
 <?php
 
